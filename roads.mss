@@ -3692,51 +3692,7 @@
 }
 
 
-#roads_high::mtbscale[mtb_scale>=0][zoom>=15]
-{
-  [type='service'],
-  [type='track'],
-  [type='bridleway'],
-  [type='footway'],
-  [type='path'],
-  [type='cycleway']
-  {
-    line-color: #2076ff;
-    line-dasharray: 1,8;
-
-    [mtb_scale=1] {
-      line-dasharray: 1,1,1,8;
-    }
-    [mtb_scale>=2] {
-      line-color: #FF0000;
-    }
-    [mtb_scale>=3] {
-      line-color: #000000; //one dash |
-    }
-    [mtb_scale>=4] {
-      line-dasharray: 1,1,1,8;// 2 ||
-    }
-    [mtb_scale>=5] {
-      line-dasharray: 1,1,1,1,1,8;// 3 |||
-    }
-    [mtb_scale>=6] {
-      line-dasharray: 1,1,1,1,1,1,1,8;// 4 |||
-    }
-
-    line-width: @rdz15_path*3;
-    [zoom>=16] {
-      line-width: @rdz16_path*3;
-    }
-    [zoom>=17] {
-      line-width: @rdz17_path*3;
-    }
-    [zoom>=18] {
-      line-width: @rdz18_path*3;
-    }
-  }
-}
-
-#roads_high::mtbscale[mtb_scale=null][mtb_scale_imba>=0][zoom>=15]
+#roads_high::mtbscale[mtb_scale_imba>=0][zoom>=15]
 {
   [type='service'],
   [type='track'],
@@ -3746,8 +3702,6 @@
   [type='cycleway']
   {
     line-cap: round;
-    line-color: #FFFFFF;
-    line-dasharray: 0.1,12;
 
     [mtb_scale_imba>=1] {
       line-color: #4e9b00;
@@ -3759,8 +3713,7 @@
       line-color: #000000;
     }
     [mtb_scale_imba>=4] {
-      line-color: #000000;
-      line-dasharray: 0.1,4,0.1,18;
+      line-color:rgb(219, 15, 15);
     }
 
     line-width: @rdz15_path*3;
@@ -3769,10 +3722,6 @@
     }
     [zoom>=17] {
       line-width: @rdz17_path*2;
-      line-dasharray: 0.1,24;
-      [mtb_scale_imba>=4] {
-        line-dasharray: 0.1,4,0.1,36;
-      }
     }
     [zoom>=18] {
       line-width: @rdz18_path*2;
