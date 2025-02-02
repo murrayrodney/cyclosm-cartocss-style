@@ -3692,7 +3692,7 @@
 }
 
 
-#roads_high::mtbscale[mtb_scale_imba>=0][zoom>=15]
+#roads_high::mtbscale[mtb_scale_imba>=0][zoom>=10]
 {
   [type='service'],
   [type='track'],
